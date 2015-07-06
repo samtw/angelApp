@@ -1,0 +1,46 @@
+﻿<ion-view view-title="課程介紹">
+    <ion-content>
+
+        <!--<img src="/App/img/subjectIntroDM.png" width="100%" height="100%" />-->
+        <div style="min-height:80px;text-align:center" align="center">
+            <label ng-bind="data.Title"></label>
+        </div>
+
+        <div class="list card" ng-repeat="item in vm.infoList">
+            <div class="item item-avatar">
+                <h5 style="text-align:center" ng-bind="item.Keynote"></h5>
+            </div>
+            <div class="item item-body">
+                <img class="full-image" src="/App/img/cake_big.png">
+                <h5 style="text-align:center" ng-bind-html="trustAsHtml(item.KeyValue)"></h5>
+            </div>
+        </div>
+        <!--<div class="list card">
+            <div class="item item-avatar">
+                <h2>化學科</h2>
+            </div>
+
+
+            <div class="item item-body">
+                <img class="full-image" src="/App/img/cake_big.png">
+
+                <p style="text-align:center">
+                    特聘台大化學博士,讓你從魯蛇變溫拿
+                </p>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-avatar">
+                <h2>數學科</h2>
+            </div>
+            <div class="item item-body">
+                <img class="full-image" src="/App/img/cake_big.png">
+
+                <p style="text-align:center">
+                    特聘台大數學博士,讓你從魯蛇變溫拿
+                </p>
+            </div>
+        </div>-->
+    </ion-content>
+</ion-view>

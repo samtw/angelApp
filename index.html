@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html ng-app="icdtAngel">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title></title>
+
+    <!--jquery, lodash-->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.7.0/lodash.js"></script>
+    <!--kendo ui-->
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.material.min.css" />
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet" />
+    <link href="/App/css/style.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!--kendo ui-->
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
+    <!-- google maps javascript -->
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/kendo-ui-core/2014.1.416/js/cultures/kendo.culture.zh-TW.min.js"></script>
+    <script>
+        kendo.culture('zh-TW');
+    </script>
+    <script src="../Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="../signalr/hubs"></script>
+
+    <script src="http://172.20.10.7:51814/target/target-script-min.js#anonymous"></script>
+
+
+    <!-- your app's js -->
+    <script src="app.js"></script>
+    <script src="signalr_service.js"></script>
+    <script src="data/UserService.js"></script>
+    <script src="data/CentralFactory.js"></script>
+    <script src="data/ChatroomFactory.js"></script>
+    <script src="pages/main/MainCtrl.js"></script>
+    <script src="pages/teachers/TeacherCtrl.js"></script>
+    <script src="pages/news/NewsCtrl.js"></script>
+    <script src="pages/about/AboutCtrl.js"></script>
+    <script src="pages/calendar/CalendarCtrl.js"></script>
+    <script src="pages/map/MapCtrl.js"></script>
+    <script src="pages/friends/friendCtrl.js"></script>
+    <script src="pages/login/LoginCtrl.js"></script>
+    <script src="pages/messageboard/messageBorderCtrl.js"></script>
+    <script src="data/chatRoomPhotoUpload/chatRoomPhotoUpload.js"></script>
+
+</head>
+<body >
+    <ion-nav-view></ion-nav-view>
+    <div class="tabs tabs-icon-top" ng-controller="footerCtrl" ng-show="inMain">
+        <a class="tab-item" ng-click="goThome()">
+            <img src="img/home.png" style="width:45px;height:45px;" />
+        </a>
+        <a class="tab-item" ng-click="goToMap()">
+            <img src="img/location.png" style="width:45px;height:45px;" />
+        </a>
+        <a class="tab-item" onclick="location.href='tel:07-5337934'">
+            <img src="img/phone.png" style="width:45px;height:45px;" />
+        </a>
+        <a class="tab-item">
+            <img src="img/cog.png" style="width:45px;height:45px;" />
+        </a>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+
+            Date.prototype.yyyymmdd = function () {
+                var yyyy = this.getFullYear().toString();
+                var mm = (this.getMonth() + 1).toString(); // getMonth() is zero-based
+                var dd = this.getDate().toString();
+                return yyyy + (mm[1] ? mm : "0" + mm[0]) + (dd[1] ? dd : "0" + dd[0]); // padding
+            };
+
+        });
+
+    </script>
+</body>
+</html>

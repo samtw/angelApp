@@ -1,0 +1,51 @@
+﻿<ion-view view-title="留言板">
+    <ion-content class="content-stable" on-swipe-left="hideTime = false" on-swipe-right="hideTime = true" style="bottom:100px">
+        <div ng-repeat="message in RecoedList" ng-class="{'other': message.Name == username }" class="messages" ng-click="vm.Popup($event)">
+            <div class="message">
+                <span ng-bind="message.username" class="messageRow"> </span>
+                <span ng-bind-html="trustAsHtml(message.Content)" class="messageRow"> </span>
+
+                <br />
+                <small ng-bind="message.CreateTime" style="line-height:1;vertical-align:bottom;"> </small>
+            </div>
+
+
+
+            <!--<div class="time" ng-class="{'slide-right': hideTime, '': !hideTime}">{{message.time}}</div>-->
+        </div>
+
+
+
+
+    </ion-content>
+
+    <ion-footer-bar keyboard-attach class="bar-stable item-input-inset" style="bottom:50px">
+        <div class="camera_cover_image">
+            <input type="file" accept="image/*" capture="camera" file-model="myFile" class="camera_file_input" />
+        </div>
+        <label class="item-input-wrapper">
+            <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" />
+        </label>
+        <button class="button button-clear" ng-click="sendMessage()">
+            Send
+        </button>
+    </ion-footer-bar>
+</ion-view>
+
+<style>
+    .camera_cover_image {
+        width: 60px;
+        /*height: 60px;
+        margin: auto;*/
+        background-image: url('/App/img/camera-icon.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .camera_file_input {
+        opacity: 0.0;
+        max-width: 70px;
+        width: 100%;
+        /*margin-left: -200px;*/
+    }
+</style>

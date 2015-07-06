@@ -1,0 +1,85 @@
+﻿<ion-view view-title="師資團隊">
+    <ion-content class="back">
+
+        <!--<img src="/App/img/teacherIntro.jpg" width="100%" height="100%" />-->
+
+
+
+        <div style=" width: 100%;height: 60px;" align="center">
+            <ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true">
+                <ion-slide ng-repeat="item in DataList">
+                    <figure>
+                        <img ng-src="{{item.ImageUrl}}" style="width:100%;height:auto;" />
+                    </figure>
+                    <!--<ion-slide>
+                        <img src="/App/img/cake_big.png" />
+                    </ion-slide>
+                    <ion-slide>
+                        <img src="/App/img/_cake_slice.png" />
+                    </ion-slide>
+                    <ion-slide>
+
+                        <img src="/App/img/dakuor1.jpg" style="height:200px;width:100%" />
+                    </ion-slide>-->
+            </ion-slide-box>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="row">
+            <div class="col .col-33" style="text-align:center" ng-repeat="item in SubjectList">
+                <a ng-click="goToTeachersDetail(item.id)">
+                    <img ng-src="/App/img/{{item.SubjectName}}.png" class="iconImage" />
+
+                </a>
+                <div>
+                    <label ng-bind="item.SubjectName"></label>
+                </div>
+                <!--<div class="col .col-33" style="text-align:center">
+                     <img src="/App/img/math_數學科.png" class="iconImage" />
+                     <div>
+                         <label>數學科</label>
+                     </div>
+                 </div>-->
+                <!--<div class="col .col-33  " style="text-align:center">
+                    <a ng-click="goToTeachersDetail(3)">
+                        <img src="/App/img/english_英文科.png" class="iconImage" />
+                    </a>
+                    <div>
+                        <label>英文科</label>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <!--<br /><br /><br />-->
+        <!--<div class="row">
+            <div class="row">
+                <div class="col .col-33" style="text-align:center">
+                    <img src="/App/img/science_自然科.png" class="iconImage" />
+                    <div>
+                        <label>國文科</label>
+                    </div>
+                </div>
+                <div class="col .col-33" style="text-align:center">
+                    <img src="/App/img/math_數學科.png" class="iconImage" />
+                    <div>
+                        <label>歷史科</label>
+                    </div>
+                </div>
+                <div class="col .col-33  " style="text-align:center">
+                    <a ng-click="goToTeachersDetail(3)">
+                        <img src="/App/img/english_英文科.png" class="iconImage" />
+                    </a>
+                    <div>
+                        <label>地理科</label>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!--<div class="row">
+            <div class="col .col-33" style="text-align:center">
+                <img src="/App/img/milky_blue.png" />
+                <img src="/App/img/milky_blue.png" />
+                <img src="/App/img/milky_blue.png" />
+            </div>
+        </div>-->
+    </ion-content>
+</ion-view>

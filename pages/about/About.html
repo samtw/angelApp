@@ -1,0 +1,68 @@
+﻿<ion-view view-title="關於我們" class="back">
+    <ion-content>
+        <div style=" width: 100%;min-height:80px;" align="center">
+            <ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true" show-pager="false">
+                <ion-slide ng-repeat="item in DataList">
+                    <figure>
+                        <img ng-src="{{item.ImageUrl}}" style="width:100%;height:auto;" />
+                    </figure>
+                </ion-slide>
+                <!--<ion-slide>
+                    <figure>
+                        <img src="/App/img/goal.JPG" width="100%" height="auto" />
+                        <figcaption>經營宗旨</figcaption>
+                    </figure>
+                </ion-slide>
+                <ion-slide>
+                    <figure>
+                        <img src="/App/img/spirit.JPG" width="100%" height="auto" />
+                        <figcaption>精神標語</figcaption>
+                    </figure>
+                </ion-slide>
+                <ion-slide>
+                    <figure>
+                        <img src="/App/img/frontDesk.JPG" width="100%" height="auto" />
+                        <figcaption>櫃檯</figcaption>
+                    </figure>
+                </ion-slide>-->
+            </ion-slide-box>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="row">
+                <div class="col .col-33" style="text-align:center">
+                    <a ng-click="goToDetailInfo(1)">
+                        <img src="/App/img/knowUs.png" class="iconImage" />
+                    </a>
+                    <div>
+                        <label>認識我們</label>
+                    </div>
+                </div>
+                <div class="col .col-33" style="text-align:center">
+                    <a ng-click="goToDetailInfo(2)">
+                        <img src="/App/img/subjectIntro.png" class="iconImage" />
+                    </a>
+                    <div>
+                        <label>課程介紹</label>
+                    </div>
+                </div>
+                <div class="col .col-33  " style="text-align:center">
+                    <a onclick="window.open('https://www.facebook.com/appstar.tw?fref=ts')">
+                        <img src="/App/img/facebook_btn.png" class="iconImage" width="150px" />
+                    </a>
+                    <div>
+                        <label>FB粉絲團</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br /><br /><br />
+        <!--<div class="row">
+            <div class="col .col-33" style="text-align:center">
+                <img src="/App/img/milky_blue.png" />
+                <img src="/App/img/milky_blue.png" />
+                <img src="/App/img/milky_blue.png" />
+            </div>
+        </div>-->
+    </ion-content>
+</ion-view>

@@ -1,0 +1,44 @@
+﻿<ion-view view-title="教師資訊">
+    <ion-content>
+        <div class="list card" ng-repeat="item in TeacherList">
+            <div class="item item-body">
+                <img class="full-image" ng-src="{{item.Photo}}">
+                <p style="text-align:center;" ng-bind="item.Name">
+                </p>
+                <p style="text-align:center;" ng-bind="item.Nickname">
+                </p>
+                <p style="text-align:center;"  ng-bind-html="trustAsHtml(item.Experience)">
+                </p>
+            </div>
+        </div>
+        <!--<div class="list card">
+            <div class="item item-body">
+                <img class="full-image" src="/App/img/cake_big.png">
+                <p style="text-align:center;">
+                    公孫老師
+                </p>
+                <p style="text-align:center;">
+                    國立台灣大學化學系博士畢業
+                </p>
+                <p style="text-align:center;">
+                    國立台灣大學化學系碩士畢業
+                </p>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-body">
+                <img class="full-image" src="/App/img/cake_big.png">
+                <p style="text-align:center;">
+                    高昇老師
+                </p>
+                <p style="text-align:center;">
+                    國立台灣大學數學系博士畢業
+                </p>
+                <p style="text-align:center;">
+                    國立台灣大學數學系碩士畢業
+                </p>
+            </div>
+        </div>-->
+    </ion-content>
+</ion-view>

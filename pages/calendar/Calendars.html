@@ -1,0 +1,28 @@
+﻿<ion-view view-title="行事曆" class="back">
+    <ion-content>
+
+        <div class="calendar-wrap k-header">
+            <div class="box-col" style="text-align: center;">
+                <kendo-calendar ng-model="vm.selectDate" k-rebind="options" k-options="options"></kendo-calendar>
+            </div>
+        </div>
+        <ion-scroll>
+            <div class="list">
+                <a class="item" ng-click="openModal(item)" ng-repeat="item in eventList">
+                    <h2 ng-bind="item.ArticleTitle"></h2>
+                </a>
+                <!--<a class="item" href="#">
+                    <h2>英文</h2>
+                </a>
+                <a class="item" href="#">
+                    <h2>國文</h2>
+                </a>
+                <a class="item" href="#">
+                    <h2>科學</h2>
+                </a>-->
+            </div>
+        </ion-scroll>
+
+        <br />
+    </ion-content>
+</ion-view>

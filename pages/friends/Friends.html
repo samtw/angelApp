@@ -1,0 +1,73 @@
+﻿<style>
+    .scroll .list:last-child {
+        margin-bottom: 50px !important;
+    }
+
+
+</style>
+
+
+
+
+
+<ion-view view-title="朋友列表">
+    <ion-content>
+        <div id="search-bar">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper" id="search-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" placeholder="Search" ng-model="query" ng-change="search()">
+                </label>
+            </div>
+        </div>
+        <!--<div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search">
+            </label>
+        </div>-->
+        <div class="list" ng-repeat="class in classes" style="margin-bottom: 0;">
+            <div class="item item-divider">
+                {{class.Name}}
+            </div>
+            <a class="item item-avatar" ng-repeat="item in class.Member" ng-click="gotToTalk(item.id)">
+                <img src="/App/img/contactpoeple.png">
+                <h2>{{item.Name}}, {{item.UserType}}</h2>
+            </a>
+
+
+
+            <!--<a class="item item-avatar" href="#">
+            <img src="/App/img/contactpoeple.png">
+            <h2>中明</h2>
+            <p>理化一哥</p>
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="/App/img/contactpoeple.png">
+            <h2>小明</h2>
+            <p>化學一哥</p>
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="/App/img/contactpoeple.png">
+            <h2>小英</h2>
+            <p>英文一姐</p>
+        </a>
+
+
+        <div class="item item-divider">
+            家人
+        </div>
+        <a class="item item-avatar" href="#">
+            <img src="/App/img/contactpoeple.png">
+            <h2>老媽</h2>
+            <p>氣質</p>
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="/App/img/contactpoeple.png">
+            <h2>老爸</h2>
+            <p>有錢</p>
+        </a>-->
+
+        </div>
+    </ion-content>
+</ion-view>

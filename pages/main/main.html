@@ -1,0 +1,63 @@
+﻿<ion-view view-title="Fun學堂" hide-back-button="true">
+    <ion-content class="back">
+        <div class="ad_banner">
+            <!--<img src="/App/img/_cake_slice.png" style="min-height:50px;min-width:50px"/>-->
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col .col-33" style="text-align:center">
+                <a ng-click="goToNews(subdomain_string)">
+                    <img src="/App/img/news.png" class="iconImage">
+                </a>
+                <div>
+                    <label>最新消息</label>
+                </div>
+            </div>
+            <div class="col .col-33" style="text-align:center">
+                <a ng-click="goToAbout(subdomain_string)">
+                    <img src="/App/img/about.png" class="iconImage" />
+                </a>
+                <div>
+                    <label>關於我們</label>
+                </div>
+            </div>
+
+            <div class="col .col-33  " style="text-align:center">
+                <a ng-click="goToTeachers(subdomain_string)">
+                    <img src="/App/img/teachers.png" class="iconImage" />
+                </a>
+                <div>
+                    <label>師資團隊</label>
+                </div>
+            </div>
+        </div>
+        <br /><br /><br />
+        <div class="row">
+
+            <div class="col .col-33" style="text-align:center">
+                <a ng-click="goToCalendar()">
+                    <img src="/App/img/mySubjects.png" class="iconImage" />
+                </a>
+                <div>
+                    <label>我的課程</label>
+                </div>
+            </div>
+            <div class="col .col-33" style="text-align:center">
+                <a ng-click="goToFriends()">
+                    <img src="/App/img/myFriends.png" class="iconImage" />
+                </a>
+                <div>
+                    <label>我的朋友</label>
+                </div>
+            </div>
+            <div class="col .col-33" style="text-align:center">
+                <a ng-click="goTomessageboard()">
+                    <img src="/App/img/chatrooms.png" class="iconImage" />
+                </a>
+                <div>
+                    <label>溝通天地</label>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

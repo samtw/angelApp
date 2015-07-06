@@ -1,0 +1,27 @@
+﻿<ion-view view-title="最新消息">
+    <ion-content>
+        <div class="list">
+            <a class="item item-avatar" ng-repeat="item in NewsList" ng-click="goToNewsDetail(item)">
+                <img ng-src="{{item.Image}}" class="iconImage">
+                <h2 ng-bind="item.ArticleTitle"> </h2>
+                <p ng-bind="item.ArticleAnnotate"> </p>
+                <p ng-bind="item.CreateTime |  date:'yyyy/MM/dd' " style="float:right;"> </p>
+            </a>
+            <!--<a class="item item-avatar" href="#" ng-click="vm.goToDetail(1)">
+                <img src="/App/img/newstitle.png" class="iconImage">
+                <h2>[時事]12年國教</h2>
+                <p>105學年起，免試入學採計在校成績</p>
+            </a>
+            <a class="item item-avatar" href="#" ng-click="vm.goToDetail(2)">
+                <img src="/App/img/newstitle.png" class="iconImage">
+                <h2>[恭喜]104教育會考榜單</h2>
+                <p>本班第一志願人數</p>
+            </a>-->
+            <!--<a class="item item-avatar" href="#">
+                <img src="/App/img/newstitle.png" class="iconImage">
+                <h2>最新消息四</h2>
+                <p>副標題</p>
+            </a>-->
+        </div>
+    </ion-content>
+</ion-view>
