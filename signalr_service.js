@@ -8,7 +8,7 @@ app.service('SignalrService', ['$', '$rootScope', 'MessagesService', function ($
 
         // Getting the connection object
         // var url = UrlHelper.prepareSignalrUrl();
-        var url = "http://localhost:51814/signalr/hubs"
+        var url = "http://bearextest.infocloud.com.tw/signalr/hubs"
         console.log(url);
         var connection = $.hubConnection(url, { useDefaultPath: false ,transport: ['longPolling']});
 
